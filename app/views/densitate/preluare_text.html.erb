@@ -1,0 +1,8 @@
+<h1>Densitate#preluare_text</h1>
+<p>Find me in app/views/densitate/preluare_text.html.erb</p>
+<br />
+<%= form_tag "/rezultate", method: "get" do %>
+<%= label_tag :message, "Introdu textul pentru analiză" %><br />
+<%= text_area_tag :message, "", size: "80x10" %><br />
+<%= submit_tag "Calculează densitate" %>
+<% end %>

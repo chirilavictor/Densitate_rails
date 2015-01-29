@@ -1,0 +1,15 @@
+<h1>Densitate#afisare_rezultate</h1>
+<p>Find me in app/views/densitate/afisare_rezultate.html.erb</p>
+
+<p>Număr cuvinte:  <b><%= @nr_cuv %></b>  |	Număr de cuvinte unice: <b><%= @nr_cuv_unice %></b></p>
+<p>Număr expresii: <b><%= @nr_expresii %></b>  | Număr de expresii unice: <b><%= @nr_cuv_unice %></b></p>
+
+<h3>Tabel densitate cuvinte și expresii</h3>
+<table border="1">
+<tr><th>Nr</th><th>Cuvânt</th><th>Număr apariții</th><th>Densitate</th><th>___</th><th>Expresii</th><th>Număr apariții</th><th>Densitate</th></tr>
+<% i = 1 %>
+<% @cuv_ord.each do |x| %>
+	<tr><td><%= i %></td><td><%= x[0] %></td><td><%= x[1] %></td><td><%= x[2] %></td><td></td><td><%= x[3] %></td><td><%= x[4] %></td><td><%= x[5] %></td></tr>
+	<% i += 1 %>
+<% end %>
+</table>
